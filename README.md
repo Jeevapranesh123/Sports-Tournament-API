@@ -10,7 +10,7 @@ To get Started clone the repository to your Server's Webroot
 
 Configure Your Database details in `Lib>database.php`
 
-API Documentation for this project can be found at [Wiki Section](https://git.selfmade.ninja/Jeevapranesh/sports-tournament-api/-/wikis/home) of this Project
+API Documentation for this project can be found at [Wiki Section](https://github.com/Jeevapranesh123/Sports-Tournament-API/wiki) of this Project
 
 This is Project can be used a boiler Plate for Developing API for Other Needs by Simply creating a new Directory in `apis` folder and following the format used in files in folders inside  `apis`
 
