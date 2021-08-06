@@ -102,15 +102,28 @@
             }
         }
 
+        public function isAdmin(){
+
+        }
+
         public function errors($e){
             $data = [
                 "error" => $e->getMessage()
             ];
             // print_r($data);
             $response_code = 400;
-            if($e->getMessage() == "Expired token" || $e->getMessage() == "Unauthorized"){
-                // echo 'Caught';
+            
+            if($e->getMessage() == "Expired Token"){
+                
                 $response_code = 403;
+            }
+            if($e->getMessage() == "Unauthorized"){
+                $response_code = 401;
+            }
+            
+            if($e->getMessage() == "Invalid Token"){
+
+                $response_code = 401;
             }
     
             if($e->getMessage() == "Not found"){

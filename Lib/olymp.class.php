@@ -18,7 +18,7 @@ Class Olympics{
                 return $data;
             
             }else{
-                throw new Exception("Country Not Found");
+                throw new Exception("Team Not Found");
             }
         }else{
             echo mysqli_error($this->db);
@@ -29,7 +29,7 @@ Class Olympics{
     public function list_medals($country,$val){
 
         $data=[
-            "Country"=>$country,
+            "Team"=>$country,
                 
             "Gold"=>[
                 'Count'=>$val['Gold'],
@@ -108,14 +108,14 @@ Class Olympics{
         if($result){
             $last_id = mysqli_insert_id($this->db);
             $data=[
-                "Message"=>"Country Added",
+                "Message"=>"Team Added",
                 "Country"=>$country,
                 "Id"=>$last_id
             ];
             return $data;
 
         }elseif(mysqli_errno($this->db)==1062){
-            throw new Exception("Country Already Exist");
+            throw new Exception("Team Already Exist");
         }
         else{
             echo "Shit";
@@ -202,7 +202,7 @@ Class Olympics{
                     }
                 }
                 else {
-                    throw new Exception('Country Not Found');
+                    throw new Exception('Team Not Found');
                 }
             }
             else {
