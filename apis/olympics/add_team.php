@@ -10,12 +10,12 @@ ${basename(__FILE__,'.php')}=function(){
 
         if($this->isAuthenticaed()){
 
-            if(isset($this->_request['country'])){
+            if(isset($this->_request['team'])){
 
                 try{
 
                 $a=new Olympics();
-                $country=$_POST['country'];
+                $country=$_POST['team'];
                 $data=$a->add_country($country);
                 
                 $data = $this->json($data);
