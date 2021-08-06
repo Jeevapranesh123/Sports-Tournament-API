@@ -18,6 +18,7 @@ ${basename(__FILE__,'.php')}=function(){
                     'Status'=>'Signup Success',
                     'User'=>$a->username,
                     'Email'=>$a->email,
+                    'Pass'=>$a->password,
                 ];
                 $this->response($this->json($data),200);
             }
@@ -42,6 +43,6 @@ ${basename(__FILE__,'.php')}=function(){
         $data=[
             'Message'=>'Method Not Allowed',
         ];
-        $this->response($this->json($data),405);
+        $this->response($this->json($data),400);
     }
 };

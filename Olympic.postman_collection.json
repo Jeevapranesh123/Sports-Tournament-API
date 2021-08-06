@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "fcc4bbff-650f-4858-84c2-5a96018dd8bf",
+		"name": "Olympic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "varu",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "varun@gmail.co",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/testapi/main.php?namespace=auth&rquest=signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "usernam",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "namespace",
+									"value": "auth"
+								},
+								{
+									"key": "rquest",
+									"value": "signup"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "varun@gmail.co",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/testapi/main.php?namespace=auth&rquest=login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "namespace",
+									"value": "auth"
+								},
+								{
+									"key": "rquest",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Olympics",
+			"item": [
+				{
+					"name": "Add Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Display Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "c59994cbb4e6069f61bc27da3cfa2a76",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/testapi/main.php?namespace=olympics&rquest=disp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "namespace",
+									"value": "olympics"
+								},
+								{
+									"key": "rquest",
+									"value": "disp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Medal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Search Team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "c59994cbb4e6069f61bc27da3cfa2a76",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/testapi/main.php?namespace=olympics&rquest=search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "namespace",
+									"value": "olympics"
+								},
+								{
+									"key": "rquest",
+									"value": "search"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Info",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/testapi/main.php?rquest=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "rquest",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "About",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/testapi/main.php?rquest=about",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"testapi",
+								"main.php"
+							],
+							"query": [
+								{
+									"key": "rquest",
+									"value": "about"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

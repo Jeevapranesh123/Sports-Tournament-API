@@ -44,6 +44,8 @@ Class Auth {
                         $this->username=$val['username'];
                         $this->Tokens=$this->addSession();
                         
+                            
+
                     }
                     else{
                         throw new Exception("Password Mismatch");
@@ -134,7 +136,7 @@ Class Auth {
         return $token;
     }
 
-
+    
 
 
     public function authenticate(){
@@ -168,17 +170,6 @@ Class Auth {
         }
 
     }
-
-    public function isAdmin(){
-        $token=$this->usertoken;
-        $query="SELECT * FROM `session` WHERE token='$token'";
-        $result=mysqli_query($this->db,$query);
-        if($result){
-
-        }
-    }
-
-    
 
 
 
